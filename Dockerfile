@@ -26,10 +26,10 @@ RUN echo "export PATH=$PATH" >> /home/user/.bashrc
 
 #COPY SRC
 
-RUN mkdir -p /home/user/app/src
-ADD $src$ /home/user/app/src/
-WORKDIR /home/user/app/src
-RUN mvn -q package
-CMD java -jar target/dependency/jetty-runner.jar target/*.war
+#RUN mkdir -p /home/user/app/src
+#ADD $src$ /home/user/app/src/
+#WORKDIR /home/user/app/src
+#RUN mvn -q package
+#CMD java -jar target/dependency/jetty-runner.jar target/*.war
 
 #CMD sleep 365d
